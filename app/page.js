@@ -1,10 +1,11 @@
 const products = [
-  ["Fresh Breads", "Soft, wholesome breads made for everyday freshness."],
-  ["Buns & Rolls", "Consistent quality for retail, food service and hospitality."],
-  ["Cakes & Pastries", "Delicious baked treats crafted for every occasion."],
-  ["Specialty Products", "A growing range designed around customer needs."]
+  ["Fresh Breads", "Soft, wholesome breads made fresh for everyday enjoyment."],
+  ["Buns & Rolls", "A versatile range of buns and rolls for retail, food service and hospitality."],
+  ["Arabic Breads", "Fresh traditional breads crafted to meet everyday customer needs."],
+  ["Cakes & Pastries", "Delicious cakes, pastries and baked treats for every occasion."],
+  ["Cookies & Biscuits", "A selection of tasty cookies and biscuits for every moment."],
+  ["Healthy & Specialty Products", "Specialty and health-focused bakery products designed around changing customer needs."]
 ];
-
 const strengths = [
   ["Freshness First", "Efficient production and distribution focused on delivering fresh products."],
   ["Reliable Distribution", "A dependable supply network designed to serve customers consistently."],
@@ -74,7 +75,9 @@ export default function Home() {
           {products.map(([title, text], i) => (
             <article className="product-card" key={title}>
               <div className="product-number">0{i+1}</div>
-              <div className="product-icon">{["🍞","🥯","🧁","🥨"][i]}</div>
+              <div className="product-icon">
+  {["🍞", "🥯", "🫓", "🧁", "🍪", "🌾"][i]}
+</div>
               <h3>{title}</h3><p>{text}</p><a href="#contact">Learn More →</a>
             </article>
           ))}
